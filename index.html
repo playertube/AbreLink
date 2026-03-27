@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Visualizador</title>
+<script src="https://5gvci.com/act/files/tag.min.js?z=10640092" data-cfasync="false" async></script>
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.topo-publicidade {
+    width: 100%;
+    min-height: 80px;
+    height:auto;    
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+.topo-publicidade img {
+    max-height: 100%;
+}
+
+.iframe-container {
+    margin-top: 80px;
+    height: calc(100vh - 80px);
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+</style>
+
+</head>
+<body>
+
+<div class="topo-publicidade">
+
+    <!-- start Ads --><script type='text/javascript' src='https://ads.forasteyros.org/banners.php?usuario_id=112&b=2'></script><!-- end Ads -->
+    
+</div>
+    
+</div>
+
+<div class="iframe-container">
+    <iframe id="siteFrame"></iframe>
+</div>
+
+<script>
+function getParametro(nome) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(nome);
+}
+
+const site = getParametro("url");
+
+if (site) {
+    document.getElementById("siteFrame").src = site;
+} else {
+    document.getElementById("siteFrame").src = "about:blank";
+}
+</script>
+
+</body>
+</html>
