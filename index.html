@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Visualizador</title>
 <script src="https://5gvci.com/act/files/tag.min.js?z=10640092" data-cfasync="false" async></script>
-    <style>
+<style>
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -31,16 +31,15 @@ body {
 
 .iframe-container {
     margin-top: 80px;
-    height: 100vh;
+    height: calc(100vh - 80px);
 }
 
 iframe {
     width: 100%;
-    height: calc (100% - 80px);
+    height: 100%;
     border: none;
 }
 </style>
-<!--<script data-url="https://tb.top.app.br/?id=X08BCAF63" src="https://playertube.github.io/Modal/modal.js"></script>-->
 
 </head>
 <body>
@@ -48,7 +47,6 @@ iframe {
 <div class="topo-publicidade">
 
     <!-- start Ads --><script type='text/javascript' src='https://ads.forasteyros.org/banners.php?usuario_id=112&b=2'></script><!-- end Ads -->
-    
 </div>
     
 </div>
@@ -70,17 +68,6 @@ if (site) {
 } else {
     document.getElementById("siteFrame").src = "about:blank";
 }
-</script>
-<script>
-const iframe = document.querySelector("iframe");
-
-function ajustarAltura() {
-  try {
-    iframe.style.height = iframe.contentWindow.document.body.scrollHeight + "px";
-  } catch(e) {}
-}
-
-setInterval(ajustarAltura, 500);
 </script>
 
 </body>
